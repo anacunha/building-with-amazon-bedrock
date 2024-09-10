@@ -1,31 +1,33 @@
 import json
 import boto3
 
-#
 session = boto3.Session()
-bedrock = session.client(service_name='bedrock-runtime') #creates a Bedrock client
 
-#
-bedrock_model_id = "amazon.titan-text-express-v1" #set the foundation model
+bedrock = session.client(service_name='bedrock-runtime')
 
-prompt = "What is the largest city in New Hampshire?" #the prompt to send to the model
+bedrock_model_id = 'amazon.titan-text-express-v1'
+
+prompt = 'Qual a maior cidade da América Latina?'
+print(prompt)
 
 body = json.dumps({
     "inputText": prompt,
     "textGenerationConfig": {
-        "temperature": 0,  
+        "temperature": 0,
         "topP": 0.5,
         "maxTokenCount": 1024,
         "stopSequences": []
     }
-}) #build the request payload
+})
 
-#
-response = bedrock.invoke_model(body=body, modelId=bedrock_model_id, accept='application/json', contentType='application/json') #send the payload to Amazon Bedrock
+response = bedrock.invoke_model(
+    body=body,
+    modelId=bedrock_model_id,
+    accept='application/json',
+    contentType='application/json'
+)
 
-#
-response_body = json.loads(response.get('body').read()) # read the response
-
-response_text = response_body["results"][0]["outputText"] #extract the text from the JSON response
+response_body = json.loads(response.get('body').read())
+response_text = response_body["results"][0]["outputText"]
 
 print(response_text)

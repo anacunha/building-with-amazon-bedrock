@@ -24,8 +24,6 @@ def get_text_response(input_content, temperature): #text-to-text client function
     
     return response['output']['message']['content'][0]['text']
 
-
 for i in range(3):
     response = get_text_response(sys.argv[1], float(sys.argv[2]))
     print(response, end='\n\n')
-
