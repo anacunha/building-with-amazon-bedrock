@@ -1,0 +1,16 @@
+faiss-cpu
+transformers
+Pillow
+pypdf
+jq
+anthropic
+chroma-hnswlib==0.7.5
+chromadb==0.5.4
+langchain-core==0.1.40
+langchain-text-splitters==0.0.1
+langchain-community==0.0.31
+langchain==0.1.13
+streamlit
+botocore
+boto3
+awscli
