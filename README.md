@@ -7,5 +7,5 @@
 
 -----
 
-- 🍸 [AWS Cloud Drops Builder's Editon](https://www.youtube.com/playlist?list=PLQHh55hXC4yrlnKxKDsLPFl5O6sTfXWHu)
+- 🍸 [AWS Cloud Drops Builder's Edition](https://www.youtube.com/playlist?list=PLQHh55hXC4yrlnKxKDsLPFl5O6sTfXWHu)
   
